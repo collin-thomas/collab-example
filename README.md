@@ -1,26 +1,30 @@
-# collab-example
+collab-example
+=======
 
-# user 1
-create repo
-mkdir collab-example
-cd collab-example/
-echo "# collab-example" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/nillocftw/collab-example.git
-git push origin master
-touch index.html
-echo "hello world" >> index.html
-git commit -am 'added index'
-git push origin master
+user 1
+------
+ 1. create repo
+ 2. mkdir collab-example
+ 3. cd collab-example
+ 4. echo "# collab-example" >> README.md
+ 5. git init
+ 6. git add README.md
+ 7. git commit -m "first commit"
+ 8. git remote add origin https://github.com/nillocftw/collab-example.git
+ 9. git push origin master
+ 10. touch index.html
+ 11. echo "hello world" >> index.html
+ 12. git commit -am 'added index'
+ 13. git push origin master
 
-# user 2
-git clone https://github.com/nillocftw/collab-example.git
-echo "what is up" >> index.html
-git commit -am 'modified index'
-git push origin master
+user 2
+------
+ 1. git clone https://github.com/nillocftw/collab-example.git
+ 2. echo "what is up" >> index.html
+ 3. git commit -am 'modified index'
+ 4. git push origin master
 
-# user 1
-git pull origin master
-cat index.html
+user 1
+------
+ 1. git pull origin master
+ 2. cat index.html
