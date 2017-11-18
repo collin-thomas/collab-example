@@ -5,85 +5,137 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <title>Collab</title>
-	
+
     <style>
+        body {
+            /*
+            I'd recommend overriding the font size globally
+            rather than just the p tag. that way links and everything gets it.
+            */
+            font-size: 16px;
+        }
+        
         p {
-            text-align: center;
-            font-size: 18px;
-            color: #444;
+            /*text-align: center;
+            font-size: 18px;*/
+            color: #333;
         }
 
         h1 {
-            color: blue;
-            text-align: center;
-            font-size: 24px;
+            /*
+            It's bad practice to overide heading sizes unless consistent
+            Bootstrap has done a lot of work for your in the way of typography
+            */
+            color: #af2727;
+            /*text-align: center;
+            font-size: 24px;*/
         }
 
         h2 {
-            color: red;
-            font-size: 14px;
-			text-align:center;
+            color: #791c1c;
+            /*font-size: 14px;
+            text-align: center;*/
+        }
+
+        .emphasis {
+            color: #003d0f;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-						<nav class="navbar navbar-inverse">
-			  <div class="container-fluid">
-				<div class="navbar-header">
-				  <a class="navbar-brand" href="#">Collabe-Example|</a>
-				</div>
-				<ul class="nav navbar-nav">
-				  <li class="active"><a href="#">Home</a></li>
-				  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="#">about</a></li>
-					  <li><a href="#">somepage</a></li>
-					  <li><a href="#">contact</a></li>
-					</ul>
-				  </li>
-				  <li><a href="#">sumpagee</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-				</ul>
-			  </div>
-			</nav>
-			  
-			<div class="container">
-			  <h3>Right Aligned Navbar</h3>
-			  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
-			</div>
+    <nav class="navbar navbar-inverse">
+        <!-- for a page like this a regular container over the container-fluid usually looks better -->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Collabe-Example</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">about</a>
+                        </li>
+                        <li>
+                            <a href="#">somepage</a>
+                        </li>
+                        <li>
+                            <a href="#">contact</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">sumpagee</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- everything goes inside your container -->
+    <div class="container">
+        <!-- use rows and cols for formatting, should really never need a <br> -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Right Aligned Navbar</h1>
+                <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-    <h1> What I have learned </h1>
-    <p><b>Learning alot so far. this is sweet! </b></p>
-    <br>
-	<h2> this will be another update to test the readme update</h2>
-	<p>Collin making change that might get overridden when i pull</p>
-	<br>
-	<p style="color:green; font-weight: bold"> Cool. You added a head a head section and gave this example some real HTML definitions. </p>
-	<br>
-	<h1>Tried using some bootstrap navbar. works on my computer. However, because were on two seperate systems Im not sure if we need
-	to add bootstrap to our directory<h1>
-	<p> perhaps you could shed some light on the matter<p>
-	
-	
-
-
+        <div class="row">
+            <div class="col-md-6">
+                <h2>What I have learned</h2>
+                <p>
+                    <b>Learning alot so far. this is sweet!</b>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <!-- Be consitent with use of headings, start big, go small -->
+                <h2>Another update to test the readme</h2>
+                <p>Collin making change that might get overridden when i pull</p>
+                <!-- stay away from using inline css, define your own class -->
+                <p class="emphasis">Cool. You added a head a head section and gave this example some real HTML definitions.</p>
+            </div>
+        </div>
+        <h1>Tried using some bootstrap navbar. </h1>
+        <p>
+            Works on my computer. However, because were on two seperate systems Im not sure if we need to add bootstrap to our directory
+            perhaps you could shed some light on the matter
+        </p>
+        <p><b>In Response to DeRose,</b></p>
+        <p>
+            Adding boostrap via the CDN as you did there works. You could download those files 
+            and store them locally in this proejct, that way this would be self container. 
+            That is typically a best practice.  See my comment section at the bottom for help.
+        </p>
+    </div>
+    <!-- best practice to have script tags at bottom of body -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- if you were to download, make a lib folder and put them there -->
+    <!-- 
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    -->
 </body>
 
 </html>
